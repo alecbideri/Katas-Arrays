@@ -1,9 +1,10 @@
 // left to right 
 
 function readRowbyRow(arr){
+    let result = [];
     for(var i = 0 ; i < arr.length ; i++){
         for(var j = 0 ; j < arr[i].length ; j++){
-            return matrix[i][j] ;
+            result.push(arr[i][j])  ;
         }
     }
 }
@@ -11,12 +12,15 @@ function readRowbyRow(arr){
 // Right to left 
 
 function readRowReverse(arr){
+    let result = [];
     for (var i = 0 ; i < arr.length ; i++){
       for (var j = arr[i].length-1 ; j >= 0 ; j++){
-        return arr[i][j];
+        result.push(arr[i][j])  ;
       }
     }
 }
+
+// top to bottom 
 
 function readByColumn(arr){
     for (var j = 0 ; j < arr[0].length ; j++){
@@ -26,6 +30,7 @@ function readByColumn(arr){
     }
 }
 
+// bottom to top 
 
 function readByColumnReverse(arr){
     for (var j = 0 ; arr[0].length ; j++){
@@ -42,3 +47,11 @@ const matrix = [
     [4, 5, 6],
     [7, 8, 9]
 ];
+
+console.log(readRowbyRow(matrix));
+
+console.log(readRowReverse(matrix));
+
+console.log(readByColumn(matrix));
+
+console.log(readByColumnReverse(matrix));
