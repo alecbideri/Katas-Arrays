@@ -1,17 +1,9 @@
-function twoOldestAges(ages) {
-    let oldest = ages[0];
-    let secondOldest = ages[1];
-  
-    for (let i = 2; i < ages.length; i++) {
-      if (ages[i] > oldest) {
-        secondOldest = oldest;
-        oldest = ages[i];
-      } else if (ages[i] > secondOldest) {
-        secondOldest = ages[i];
-      }
-    }
-  
-    return [oldest, secondOldest];
-  }
+function SumArr(array){
+  let newArray = array.sort((a,b)=>b-a);
 
-  console.log(twoOldestAges([1,5,87,45,8,8]));
+  let sum = newArray[0] + newArray[1];
+
+  return sum ;
+}
+
+console.log(SumArr([1,2,3,4]));
