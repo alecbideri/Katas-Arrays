@@ -7,6 +7,7 @@ function readRowbyRow(arr){
             result.push(arr[i][j])  ;
         }
     }
+    return result ;
 }
 
 // Right to left 
@@ -18,26 +19,32 @@ function readRowReverse(arr){
         result.push(arr[i][j])  ;
       }
     }
+    return result ;
 }
 
 // top to bottom 
 
 function readByColumn(arr){
+    let result = [];
     for (var j = 0 ; j < arr[0].length ; j++){
         for (var i = 0 ; i < arr.length ; i++){
-            return arr[i][j];
+            result.push(arr[i][j])  ;
         }
     }
+    return result ;
 }
 
 // bottom to top 
 
 function readByColumnReverse(arr){
+    let result = [];
+     result.push(arr[i][j])  ;
     for (var j = 0 ; arr[0].length ; j++){
         for (var i = 0 ; i < arr.length -1 ; i++){
-            return arr[i][j];
+            result.push(arr[i][j])  ;
         }
     }
+    return result ;
 }
 
 
